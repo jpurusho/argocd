@@ -25,5 +25,7 @@ spec:
     spec:
       containers:
       - image: nginx:alpine
+        ports:
+            - containerPort: 80
         imagePullPolicy: IfNotPresent
         name: nginx-alpine
