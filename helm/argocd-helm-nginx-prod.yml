@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-development
+  name: nginx-deployment
   namespace: argocd
 spec:
   destination:
@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
       - values-prod.yaml
-    path: helm/nginx-development
+    path: helm/nginx-deployment
     repoURL: https://github.com/jpurusho/argocd 
     targetRevision: HEAD
